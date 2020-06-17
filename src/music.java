@@ -61,8 +61,6 @@ public class music extends JFrame {
 		AudioInputStream DS = AudioSystem.getAudioInputStream(new File("music/DS.wav"));
 		AudioInputStream EG = AudioSystem.getAudioInputStream(new File("music/EG.wav"));
 		AudioInputStream A = AudioSystem.getAudioInputStream(new File("music/A.wav"));
-		AudioInputStream BL = AudioSystem.getAudioInputStream(new File("music/BL.wav"));
-		AudioInputStream C = AudioSystem.getAudioInputStream(new File("music/C.wav"));
 		AudioInputStream OTR = AudioSystem.getAudioInputStream(new File("music/OTR.wav"));
 		
 		Clip clip = AudioSystem.getClip();
@@ -88,7 +86,7 @@ public class music extends JFrame {
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 19));
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Demon Slayer - Gurenge", "Attack On Titan", "Eminem - Godzilla ", "Africa", "PewDiePie - Bitch Lasanga", "PewDiePie - Congratulations", "Old Town Roads"}));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Demon Slayer - Gurenge", "Attack On Titan", "Eminem - Godzilla ", "Africa", "Old Town Roads"}));
 		comboBox.setBounds(52, 70, 330, 28);
 		contentPane.add(comboBox);
 		
@@ -141,29 +139,8 @@ public class music extends JFrame {
 					
 				}
 				
+				
 				if(value == 4) {
-					try {
-						clip.open(BL);
-					} catch (LineUnavailableException | IOException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-					clip.loop(Clip.LOOP_CONTINUOUSLY);
-					
-				}
-				
-				if(value == 5) {
-					try {
-						clip.open(C);
-					} catch (LineUnavailableException | IOException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-					clip.loop(Clip.LOOP_CONTINUOUSLY);
-					
-				}
-				
-				if(value == 6) {
 					try {
 						clip.open(OTR);
 					} catch (LineUnavailableException | IOException e1) {
